@@ -2,6 +2,12 @@ package friendlybytebuf
 
 import "bytes"
 
+func Create() *FriendlyByteBuf {
+	return &FriendlyByteBuf{
+		buf: bytes.Buffer{},
+	}
+}
+
 func FromBytes(data []byte) *FriendlyByteBuf {
 	return &FriendlyByteBuf{
 		buf: *bytes.NewBuffer(data),
